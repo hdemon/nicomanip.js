@@ -1,0 +1,32 @@
+{
+	"name" : "Niconico-douga extensioner",
+	"version" : "0.1",
+	"description" : "it expands capacity Niconico-douga ",
+	"background_page" : "background.html",
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+
+	"content_scripts" : [
+	    {
+			"matches" : [
+				"http://www.nicovideo.jp/*"
+			],
+			"js" 			: ["dom.js"],
+			"css"			: ["dom.css"],
+			"run_at"		: "document_idle",
+			"all_frames"	: true
+	    }
+	],
+
+	"permissions": [
+		"tabs",
+		"http://www.nicovideo.jp/*", 
+		"http://ext.nicovideo.jp/*"
+	],
+
+	"icons" : {
+		"48" : "sandwich-48.png",
+		"128" : "sandwich-128.png"
+	}
+}
