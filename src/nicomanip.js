@@ -4,6 +4,45 @@
  * 
  * @author Masami Yonehara
  * @version 0.1
+ *
+ * mylist: Object 						// マイリストオブジェクト
+ *		5496960: Object 				// マイリストId
+ *			create_time: 	1205048587	// マイリスト作成時（以下全てUNIX時間）
+ *			default_sort: 	"0"			// マイリストソート順
+ *			description: 	""			// 
+ *			icon_id: 		"0"
+ *			id: 			"5496960"
+ *			name: 			"保管B"
+ *			public: 		"0"
+ *			sort_order: 	"16"
+ *			type: 			"normalList"
+ *			update_time: 	1302364463
+ *			user_id: 		"5409203"
+ *			elements: Object			// アイテムオブジェクト
+ *				1192907034: Object		// アイテムID
+ *					create_time: 	1216175282		// 動画作成時間
+ *					deleted: 		"0"				// 削除済みか否か
+ *					description: 	""				// ユーザによる動画説明文
+ *					first_retrieve: 1192907034
+ *					group_type: 	"default"		//
+ *					item_id: 		"1192907034"	// アイテムID
+ *					item_type: 		0				// アイテムの種類 動画：0 静画：５
+ *					last_res_body: 	"ｗｗｗｗｗｗ アホすぎワロタｗｗｗ エナジーボンボン wwwww... "
+ *					length_seconds: "78"			// 動画時間（秒）
+ *					mylist_counter: "7"				// マイリスト数
+ *					num_res: 		"205"			// コメント数
+ *					posting_time: 	1285386290		// 投稿日時
+ *					thumbnail_url: "http://tn-skr4.smilevideo.jp/smile?i=1326983"
+ *					title: 			"テレポーテーションのやりかた。その2"	// タイトル
+ *					update_time: 	1216175282
+ *					video_id: 		"sm1326983"		// 動画ID
+ *					view_counter: 	"8086"			// 閲覧数
+ *					watch: 			0				
+ *					watch_id: 		"sm1326983"
+ *
+ *
+ *
+ *
  */
 
 (function(window){
@@ -360,7 +399,7 @@ MyNico = (function(){
 			/**
 			 * 全マイリス・動画情報を取得する。直接にはgetMylistGroupがその役割を担うが、reload内で、マイリストIDを親、itemIDを子とする連想配列に組み直す。			 
 			 * @memberOf MyNico.prototype
-			 * @param _callback 完了時コールバックのハンドル
+			 * @param _callback 完了時コールバックのハンドル。コールバック関数には、読み込んだマイリストオブジェクトを第１引数に渡す。
 			 */
 			reload : function( _callback ) {
 				this.getMylistGroup(function(){

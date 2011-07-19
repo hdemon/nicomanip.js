@@ -3,16 +3,24 @@
 ##概要
 　ニコニコ動画APIを操作し、動画／静画情報の取得、抽出、ソート、コピー／移動等を可能にするChrome Extension用ライブラリです。
 
-##基本的な使い方
+##使い方
 
-###準備
-manifest.jsonの"permissions"で
+###準備と基本概念
+- manifest.jsonの"permissions"で
 
 "http://www.nicovideo.jp/*" 
 
 "http://ext.nicovideo.jp/*"
 
-への接続を許可した上で、backgroundもしくはcontent script内でnicomanip.jsを読み込み、コンストラクタよりマイリストオブジェクトを作成した後、reloadメソッドで動画情報を読み込んだ上で、各メソッドを実行して下さい。
+への接続を許可する。
+- backgroundもしくはcontent script内でnicomanip.jsを読み込む
+- MyNicoモジュールよりマイリストオブジェクトを作成
+- reloadメソッドで動画情報を読み込む
+
+以上で準備は完了です。以降のアクションは、
++ 抽出フェーズ：   filterとsortをメソッドチェーンでつなげ、目的の動画を抽出する。
++ 操作フェーズ：   抽出されたものに対して、copyやmoveによってマイリスト操作を行う。
+という２つのフェーズに分けられます。
 
 ###具体例
 ~~~~
@@ -29,14 +37,14 @@ mylist.reload(function(mylist){
 				min : 300
 			}
 		}) 
-		.filter({ // さらに、再生回数1000～2000の動画を抽出
+		.filter({ // さらに、その中から再生回数1000～2000の動画を抽出
 			view_counter : {
 				min : 1000,
 				max : 2000
 			}
 		}) 
 		.sort({
-			condition :	[ // 抽出結果を再生回数を昇順にソートし、
+			condition :	[ // 抽出結果を昇順の再生回数でソートし、
 				{
 					name : "view_counter",
 					ascend : true
