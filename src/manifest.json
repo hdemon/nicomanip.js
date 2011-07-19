@@ -3,9 +3,6 @@
 	"version" : "0.1",
 	"description" : "Niconico-douga API Wrapper",
 	"background_page" : "background.html",
-	"browser_action": {
-		"default_icon": "icon.png"
-	},
 
 	"permissions": [
 		"tabs",
@@ -14,7 +11,6 @@
 	],
 
 	"icons" : {
-		"48" : "sandwich-48.png",
-		"128" : "sandwich-128.png"
+		"128" : "attachment128.png"
 	}
 }
