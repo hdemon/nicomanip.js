@@ -12,9 +12,7 @@ manifest.jsonの"permissions"で
 
 "http://ext.nicovideo.jp/*"
 
-への接続を許可した上で、backgroundもしくはcontent script内でnicomanip.jsを読み込む。
-
-その後、コンストラクタよりマイリストオブジェクトを作成し、reloadメソッドで動画情報を読み込んだ上で各メソッドを実行する。
+への接続を許可した上で、backgroundもしくはcontent script内でnicomanip.jsを読み込み、コンストラクタよりマイリストオブジェクトを作成した後、reloadメソッドで動画情報を読み込んだ上で、各メソッドを実行して下さい。
 
 ###具体例
 ~~~~
@@ -42,28 +40,8 @@ mylist.reload(function(mylist){
 }
 ~~~~
 
-##メソッド一覧
+##もっと詳しい情報
 
-###基本メソッド
-+ reload
+http://hdemon.github.com/nicomanip.js/index.html
 
-+ move
-+ copy
-+ filter
-+ sort
-+ findOverlap
-
-###ローレベルメソッド
-+ getMylist
-+ getMylistGroup
-+ getThumbInfo
-+ getToken
-+ mylistGroup
-+ defList
-+ normalList
-+ watchList
-
-###未実装
-+ addMylist
-+ createIdList
-+ exportJSON
+こちらを御覧下さい。
