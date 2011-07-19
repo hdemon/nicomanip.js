@@ -5,7 +5,7 @@
  * @author Masami Yonehara
  * @version 0.1
  *
- * mylist: Object 						// マイリストオブジェクト
+ *	mylist: Object 						// マイリストオブジェクト
  *		5496960: Object 				// マイリストId
  *			create_time: 	1205048587	// マイリスト作成時（以下全てUNIX時間）
  *			default_sort: 	"0"			// マイリストソート順
