@@ -29,11 +29,19 @@ mylist.reload(function(mylist){
 				min : 300
 			}
 		}) 
-		.sort({ // そこからさらに、再生回数1000～2000の動画を昇順にソートする。
+		.filter({ // そこからさらに、再生回数1000～2000の動画を抽出
 			view_counter : {
 				min : 1000,
 				max : 2000
 			}
+		}) 
+		.sort({
+			condition :	[ // そこからさらに、再生回数を昇順にソートする。
+				{
+					name : "view_counter",
+					ascend : true
+				}
+			],
 			low : 10 // ソートしたものの内、上位10件を抽出する。
 		})
 		.copy(123456789);　// 抽出したものを、マイリスID:123456789へコピーする。
