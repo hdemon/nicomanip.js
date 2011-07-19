@@ -29,14 +29,14 @@ mylist.reload(function(mylist){
 				min : 300
 			}
 		}) 
-		.filter({ // そこからさらに、再生回数1000～2000の動画を抽出
+		.filter({ // さらに、再生回数1000～2000の動画を抽出
 			view_counter : {
 				min : 1000,
 				max : 2000
 			}
 		}) 
 		.sort({
-			condition :	[ // そこからさらに、再生回数を昇順にソートする。
+			condition :	[ // 抽出結果を再生回数を昇順にソートし、
 				{
 					name : "view_counter",
 					ascend : true
