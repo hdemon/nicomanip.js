@@ -1,23 +1,11 @@
 {
-	"name" : "Niconico-douga extensioner",
+	"name" : "Nico Manipulator",
 	"version" : "0.1",
-	"description" : "it expands capacity Niconico-douga ",
+	"description" : "Niconico-douga API Wrapper",
 	"background_page" : "background.html",
 	"browser_action": {
 		"default_icon": "icon.png"
 	},
-
-	"content_scripts" : [
-	    {
-			"matches" : [
-				"http://www.nicovideo.jp/*"
-			],
-			"js" 			: ["dom.js"],
-			"css"			: ["dom.css"],
-			"run_at"		: "document_idle",
-			"all_frames"	: true
-	    }
-	],
 
 	"permissions": [
 		"tabs",

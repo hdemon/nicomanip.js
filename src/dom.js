@@ -119,4 +119,4 @@ console.log(dom);
 
 
 
-}(jQuery));
+}($));

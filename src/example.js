@@ -1,5 +1,8 @@
 ﻿(function(){
 
+// 使用例
+
+	
 // マイリスオブジェクトを作成。	
 var mylist = new MyNico;
 
@@ -39,8 +42,28 @@ mylist.reload(function(mylist){
 					ascend : true
 				}					
 			],
-			high : 5
+			high : 5,
 			low : 10
+		});
+
+	console.log(result);
+
+	// high lowの両方を省略すると、mylistId、itemId、ソートした値をプロパティに持つオブジェクトを、
+	// ソート順に含む配列が得られる。
+	var result = mylist
+		.filter({
+			view_counter : {
+				max : 10000,
+				min : 8000
+			}
+		})
+		.sort({
+			condition : [
+				{
+					name : "view_counter",
+					ascend : true
+				}					
+			]
 		});
 
 	console.log(result);

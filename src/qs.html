@@ -1,0 +1,29 @@
+﻿<script>
+function quickSort(array, start, end){
+	var start = start || 0,
+		end = end || array.length - 1,
+		p, tmp,
+		L, R;
+
+	if ( start === end ) return array;
+	p = start[( end - start ) / 2 + 1];
+	L = start;
+	R = end;
+//	while (true){
+		while ( array[L] < p ) L++;
+		while ( array[R] > p ) R--;
+		if ( L >= R ) break;
+		tmp = array[L];
+		array[L] = array[R];
+		array[R] = tmp;
+//	}
+	document.writeln(array);
+	quickSort(array, start, L-1);
+	quickSort(array, L, end);
+}
+
+//console.log(
+quickSort([1,4,7,3,8,9,4], 0, 7)
+//);
+
+</script>
