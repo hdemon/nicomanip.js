@@ -1,11 +1,11 @@
 # nicomanip.js
 
-## 概要
+##概要
 　ニコニコ動画APIを操作し、動画／静画情報の取得、抽出、ソート、コピー／移動等を可能にするChrome Extension用ライブラリです。
 
-## 基本的な使い方
+##基本的な使い方
 
-### 準備
+###準備
 manifest.jsonの"permissions"で
 
 "http://www.nicovideo.jp/*" 
@@ -14,7 +14,7 @@ manifest.jsonの"permissions"で
 への接続を許可した上で、backgroundもしくはcontent script内でnicomanip.jsを読み込む。
 その後、コンストラクタよりマイリストオブジェクトを作成し、reloadメソッドで動画情報を読み込んだ上で各メソッドを実行する。
 
-### 具体例
+###具体例
 ~~~~
 // マイリスオブジェクトを作成し、	
 var mylist = new MyNico;
@@ -40,27 +40,27 @@ mylist.reload(function(mylist){
 }
 ~~~~
 
-## メソッド一覧
+##メソッド一覧
 
-###　基本メソッド
-reload
-move
-copy
-filter
-sort
-findOverlap
+###基本メソッド
++reload
++move
++copy
++filter
++sort
++findOverlap
 
-### ローレベルメソッド
-getMylist
-getMylistGroup
-getThumbInfo
-getToken
-mylistGroup
-defList
-normalList
-watchList
+###ローレベルメソッド
++getMylist
++getMylistGroup
++getThumbInfo
++getToken
++mylistGroup
++defList
++normalList
++watchList
 
-### 未実装
-addMylist
-createIdList
-exportJSON
+###未実装
++addMylist
++createIdList
++exportJSON
