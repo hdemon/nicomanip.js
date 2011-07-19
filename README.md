@@ -5,6 +5,16 @@
 
 ## 基本的な使い方
 
+### 準備
+manifest.jsonの"permissions"で
+
+"http://www.nicovideo.jp/*" 
+"http://ext.nicovideo.jp/*"
+
+への接続を許可した上で、backgroundもしくはcontent script内でnicomanip.jsを読み込む。
+その後、コンストラクタよりマイリストオブジェクトを作成し、reloadメソッドで動画情報を読み込んだ上で各メソッドを実行する。
+
+### 具体例
 ~~~~
 // マイリスオブジェクトを作成し、	
 var mylist = new MyNico;
@@ -30,3 +40,27 @@ mylist.reload(function(mylist){
 }
 ~~~~
 
+## メソッド一覧
+
+###　基本メソッド
+reload
+move
+copy
+filter
+sort
+findOverlap
+
+### ローレベルメソッド
+getMylist
+getMylistGroup
+getThumbInfo
+getToken
+mylistGroup
+defList
+normalList
+watchList
+
+### 未実装
+addMylist
+createIdList
+exportJSON
