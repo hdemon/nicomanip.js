@@ -43,24 +43,24 @@ mylist.reload(function(mylist){
 ##メソッド一覧
 
 ###基本メソッド
-+reload
-+move
-+copy
-+filter
-+sort
-+findOverlap
++ reload
++ move
++ copy
++ filter
++ sort
++ findOverlap
 
 ###ローレベルメソッド
-+getMylist
-+getMylistGroup
-+getThumbInfo
-+getToken
-+mylistGroup
-+defList
-+normalList
-+watchList
++ getMylist
++ getMylistGroup
++ getThumbInfo
++ getToken
++ mylistGroup
++ defList
++ normalList
++ watchList
 
 ###未実装
-+addMylist
-+createIdList
-+exportJSON
++ addMylist
++ createIdList
++ exportJSON
