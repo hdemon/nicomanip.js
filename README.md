@@ -9,9 +9,11 @@
 manifest.jsonの"permissions"で
 
 "http://www.nicovideo.jp/*" 
+
 "http://ext.nicovideo.jp/*"
 
 への接続を許可した上で、backgroundもしくはcontent script内でnicomanip.jsを読み込む。
+
 その後、コンストラクタよりマイリストオブジェクトを作成し、reloadメソッドで動画情報を読み込んだ上で各メソッドを実行する。
 
 ###具体例
@@ -44,6 +46,7 @@ mylist.reload(function(mylist){
 
 ###基本メソッド
 + reload
+
 + move
 + copy
 + filter
