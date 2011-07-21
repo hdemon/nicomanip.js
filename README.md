@@ -5,22 +5,13 @@
 
 ##使い方
 
-###準備と基本概念
-- manifest.jsonの"permissions"で
+###準備と基本操作
+- まず、manifest.jsonの"permissions"で、"http://www.nicovideo.jp/*"と"http://ext.nicovideo.jp/*"への接続を許可して下さい。
+- 次に、backgroundもしくはcontent script内でnicomanip.jsを読み込みます。
+- 読み込んだ先で、MyNicoモジュールよりマイリストオブジェクトを作成します。
+- reloadメソッドで動画情報を読み込み、コールバックを設定します。
 
-"http://www.nicovideo.jp/*" 
-
-"http://ext.nicovideo.jp/*"
-
-への接続を許可する。
-- backgroundもしくはcontent script内でnicomanip.jsを読み込む
-- MyNicoモジュールよりマイリストオブジェクトを作成
-- reloadメソッドで動画情報を読み込む
-
-以上で準備は完了です。以降のアクションは、
-+ 抽出フェーズ：   filterとsortをメソッドチェーンでつなげ、目的の動画を抽出する。
-+ 操作フェーズ：   抽出されたものに対して、copyやmoveによってマイリスト操作を行う。
-という２つのフェーズに分けられます。
+以上で準備は完了です。以降は、コールバック内でマイリストオブジェクトのfilterやsortメソッドを呼び出し、それらをチェーンメソッドでつなぎ、copy/move等の目的の操作を行って下さい。
 
 ###具体例
 ~~~~
@@ -28,7 +19,8 @@
 var mylist = new MyNico;
 
 // reloadメソッドでマイリス中の全動画情報を読み、
-// コールバック内に目的の処理を記述する。	
+// コールバック内に目的の処理を記述する。
+// マイリストオブジェクトはコールバック関数の第1引数に与えられる。
 mylist.reload(function(mylist){
 
 	mylist
