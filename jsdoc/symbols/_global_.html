@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="JsDoc Toolkit" />
+		
+		<title>JsDoc Reference - _global_</title>
+
+    <script type="text/javascript" src="../jproton.js"></script>
+    <script type="text/javascript" src="../ui.js"></script>
+    <script type="text/javascript" src="../sh.js"></script>
+		<link rel=stylesheet href="../sh.css" type="text/css">
+		<link rel=stylesheet href="../default.css" type="text/css">
+	</head>
+
+	<body>
+		<div id="main-wrapper">
+			<div id="main">
+<!-- ============================== classes index ============================ -->
+				<div id="index" class="fixed">
+					<div id="index-wrapper">
+	<div class="header">
+	  <div id="index-close" title="Esconde o outline.">&nbsp;</div>
+	  <div id="index-title">Project Outline</div>
+	</div>
+	<div id="index-menu"><a href="../index.html">Class Index</a>
+	| <a href="../files.html">File Index</a></div>
+	
+	<div id="index-content">
+		
+		<div class="classList">
+			
+			<div class="section">
+				<div title='Global namespace.' class='itemName namespace'>
+				<div class='method-toggler'>&nbsp;</div><span class='icon'><i><a href="../symbols/_global_.html">_global_</a></i></span></div><div class='sectionItems'></div></div>
+			
+			<div class="section">
+				<div title='マイリスト管理モジュール' class='itemName'>
+				<div class='method-toggler'>&nbsp;</div><span class='icon'><a href="../symbols/MyNico.html">MyNico</a></span></div><div class='sectionItems'><div class='sectionItem classProperty'><b class='icon' title=''><a href="../symbols/MyNico.html#.NewNicoAPI#mylist">NewNicoAPI#mylist</a></b></div><div class='sectionItem classMethod'><b class='icon' title='ディープコピーを行うメソッド。'><a href="../symbols/MyNico.html#-extendDeep">extendDeep</a></b><span class='signature'>(<span title="(Object) コピー元オブジェクト">parent</span>, <span title="(Object) コピー先オブジェクト">child</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='xmlHttpRequest関数'><a href="../symbols/MyNico.html#-xhr">xhr</a></b><span class='signature'>(<span title="(String) post or get">method</span>, <span title="(String) APIのURL">url</span>, <span title="(String) APIに渡すパラメータ文字列。">param</span>, <span title="(Object) レスポンス取得成功時コールバックのハンドル。">callback</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='マイリストオブジェクトはマイリストIDを親としているが、この関数はマイリストオブジェクトから、アイテムIDを親とするマイリストIDのリストを作る。'><a href="../symbols/MyNico.html#-createItemList">createItemList</a></b><span class='signature'>(<span title="(Object) マイリストオブジェクト">thisMylist</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='copyとmoveの共通処理を担当するメソッド。'><a href="../symbols/MyNico.html#-manipulate">manipulate</a></b><span class='signature'>(<span title="(String) post or get">method</span>, <span title="(Number) マイリストID">mylistId</span>, <span title="(Object) レスポンス取得成功時コールバックのハンドル。">callback</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='未実装'><a href="../symbols/MyNico.html#checkExistence">checkExistence</a></b><span class='signature'>(<span>argsObj</span>, <span>strArray</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='再帰方式クイックソートメソッド'><a href="../symbols/MyNico.html#-quickSort">quickSort</a></b><span class='signature'>(<span title="(Array) ソート対象">array</span>, <span title="(Number) 左側探索開始位置">start</span>, <span title="(Number) 右側探索開始位置">end</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='再帰方式マージソートメソッド'><a href="../symbols/MyNico.html#-mergeSort">mergeSort</a></b><span class='signature'>(<span title="(Array) ソート対象">array</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='文字列を文字コードに変換する関数。'><a href="../symbols/MyNico.html#-charCode">charCode</a></b><span class='signature'>(<span title="(String) 対象文字列">str</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='マイリストページに埋め込まれたトークンを取得する'><a href="../symbols/MyNico.html#getToken">getToken</a></b><span class='signature'>(<span title="完了時コールバックのハンドル">callback</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='全マイリスト情報と、マイリストに含まれる全動画／静画情報をAPIより取得し、this.mylistへコピーする。'><a href="../symbols/MyNico.html#getMylistGroup">getMylistGroup</a></b><span class='signature'>(<span title="完了時コールバックのハンドル">_callback</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='APIよりマイリスト情報を取得する。とりあえずマイリスと一般マイリスの差を埋めるためのラッパー'><a href="../symbols/MyNico.html#getMylist">getMylist</a></b><span class='signature'>(<span title="(Number) 取得するマイリストのID">mylistId</span>, <span title="完了時コールバックのハンドル">_callback</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='全マイリス・動画情報を取得する。直接にはgetMylistGroupがその役割を担うが、reload内で、マイリストIDを親、itemIDを子とする連想配列に組み直す。'><a href="../symbols/MyNico.html#reload">reload</a></b><span class='signature'>(<span title="完了時コールバックのハンドル。コールバック関数には、読み込んだマイリストオブジェクトを第１引数に渡す。">_callback</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='現在のマイリストオブジェクトから、与えられた条件に該当する要素のみを抽出する。 マイリストオブジェクトの構造およびプロトタイプは変化せず、抽出されたものに対してチェーンメソッドを適用できる。'><a href="../symbols/MyNico.html#filter">filter</a></b><span class='signature'>()</span></div><div class='sectionItem classMethod'><b class='icon' title='重複するアイテムを探し、リストを返す。'><a href="../symbols/MyNico.html#findOverlap">findOverlap</a></b><span class='signature'>(<span title="(Number) 重複検索するアイテムID">itemId</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='与えられたプロパティ名に基づくソートを行う。 max、minのいずれか、もしくは両方を指定した場合、ソート結果からこれらの条件に従って抽出されたマイリストオブジェクトを返す。 これらのパラメータを指定しない場合、マイリストID、アイテムID、ソート対象の値を要素とするオブジェクトの配列を返す。'><a href="../symbols/MyNico.html#sort">sort</a></b><span class='signature'>()</span></div><div class='sectionItem classMethod'><b class='icon' title='APIに渡す"id_list"形式のパラメータを作る。APIが、コピー／移動先となるマイリストIDを１つずつしか受け付けないため、 マイリストID毎に分割する処理を行う。また、とりあえずマイリストとの分離、文字列の長さを一定間隔に分割する等の 処理も行う。'><a href="../symbols/MyNico.html#createIdList">createIdList</a></b><span class='signature'>()</span></div><div class='sectionItem classMethod'><b class='icon' title='与えられたマイリストオブジェクトに含まれるアイテムを、指定されたマイリストへコピーするメソッド。 チェーンメソッド形式で、filter、sortと組み合わせることが可能。'><a href="../symbols/MyNico.html#copy">copy</a></b><span class='signature'>(<span title="(Number) コピー先のマイリストID">mylistId</span>, <span title="完了時コールバックのハンドル">callback</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='与えられたマイリストオブジェクトに含まれるアイテムを、指定されたマイリストへ移動するメソッド。 チェーンメソッド形式で、filter、sortと組み合わせることが可能。'><a href="../symbols/MyNico.html#move">move</a></b><span class='signature'>(<span title="(Number) 移動先のマイリストID">mylistId</span>, <span title="完了時コールバックのハンドル">callback</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='未実装 マイリストを新規に追加するメソッド。'><a href="../symbols/MyNico.html#addMylist">addMylist</a></b><span class='signature'>(<span>argsObj</span>, <span>callback</span>)</span></div><div class='sectionItem classMethod'><b class='icon' title='未実装 バックアップ用メソッド。マイリストオブジェクトをJSON化し、File APIを使って間接的にダウンロード可能にする。'><a href="../symbols/MyNico.html#exportJSON">exportJSON</a></b><span class='signature'>()</span></div></div></div>
+			
+			<div class="section">
+				<div title='コンストラクタが、APIに直接アクセスするローレベルメソッドを一括定義するために使うクラス。' class='itemName'>
+				<div class='method-toggler'>&nbsp;</div><span class='icon'><a href="../symbols/MyNico-archetype.html">MyNico-archetype</a></span></div><div class='sectionItems'></div></div>
+			
+			<div class="section">
+				<div title='モジュールパターンの内部コンストラクタ。こちらが実質的な処理を行う。' class='itemName'>
+				<div class='method-toggler'>&nbsp;</div><span class='icon'><a href="../symbols/MyNico-NewNicoAPI.html">MyNico-NewNicoAPI</a></span></div><div class='sectionItems'></div></div>
+			
+		</div>
+	</div>
+</div>
+	
+
+				</div>
+				<div id="index-toggler" class="fixed">&laquo;</div>
+
+<!-- ============================== header ================================= -->	
+				<!-- begin static/header.html -->
+				<div class="header">
+  Framework jProton
+</div>
+
+				<!-- end static/header.html -->
+		
+				<div id="content">
+<!-- ============================== class title ============================ -->
+					<h1 class="classTitle">
+						Built-In Namespace _global_
+					</h1>
+		
+<!-- ============================== class summary ========================== -->			
+<!-- 
+					
+-->
+					<div class="full-description">
+						<p></p>
+					</div>
+					
+		
+<!-- ============================== constructor summary ==================== -->			
+					
+		
+<!-- ============================== properties summary ===================== -->
+					
+		
+<!-- ============================== methods summary ======================== -->
+					
+		
+<!-- ============================== constructor details ==================== -->		
+					
+		
+<!-- ============================== field details ========================== -->		
+					
+		
+<!-- ============================== method details ========================= -->		
+					
+					
+				</div>
+				
+<!-- ============================== footer ================================= -->
+				<div class="fineprint" style="clear:both">
+					
+					Documentation generated by <a href="http://www.jsdoctoolkit.org/" target="_blank">JsDoc Toolkit</a> 2.4.0 on Wed Jul 20 2011 10:58:18 GMT+0900 (JST)
+				</div>
+				
+			</div>
+		</div>
+		
+	</body>
+</html>
